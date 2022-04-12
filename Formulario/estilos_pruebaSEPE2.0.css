@@ -1,0 +1,80 @@
+/*Esta hoja contiene todos los estilos que contiene la pagina*/
+
+h1 {
+    color: rgb(98, 98, 123);
+    margin: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h3 {
+    color: rgb(98, 98, 123);
+    margin: 30px;
+}
+/*El boton que realiza la busqueda tras completar el formulario*/
+.boton {
+    background-color: rgb(98, 98, 123);
+    color: white;
+}
+/*el contenido soporta al formulario y al contenedor que lo soporta*/
+.contenido{
+    align-content: center;
+}
+
+.formulario {
+    background-color: lightgray;
+    font-family: 'Montserrat';
+    width: 35%;
+    border: 10px black;
+    padding: 30px;
+    margin: 30px;
+    position: absolute;
+    left: 30%;
+}
+
+.cabecera{
+    background-color:rgb(98, 98, 123);
+    position: absolute;
+    width: 100%;
+    height: min-content;
+    padding: 15px;
+    margin: 0px;
+
+}
+
+footer{
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    bottom: 10px;
+    background-color:rgb(98, 98, 123);
+    font: bold;
+    padding: 30px;
+    margin: auto;
+}
+/*Estos son los diferentes logos dentro del footer y su posicion absoluta dentro del mismo, hay que tener en cuenta que esto provoca errores de visualizacion en otras resoluciones o con ventanas
+en tamaño que no sea el maximizado, al no utilizar bootstrap, no es el producto final*/
+.SEXPE{
+    position: absolute;
+    left: 3%;
+}
+.UP{
+    position: absolute;
+    left: 20%;
+}
+.JUNTA{
+    position: absolute;
+    left: 35%;
+}
+.PLANEMPLEO{
+    position: absolute;
+    left: 55%;
+}
+.SEPE{
+    position: absolute;
+    left: 70%;
+}
+.DSTINO{
+    position: absolute;
+    left: 90%;
+}
+
+	

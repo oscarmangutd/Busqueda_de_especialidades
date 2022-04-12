@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ES">
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulario clon SEPE</title>
+        <link href="estilos_pruebaSEPE2.0.css"
+        rel="stylesheet" type="text/css">
+
+    </head>
+    <body>
+        <h1> <center>ESCUELA DUAL PROFESIONAL PROYECTO DSTINO</center> </h1>
+<!-- Este es el menú superior que contiene 4 botones que enviarían a otros lugares de la página-->
+        <div class="cabecera">
+          
+        </div>
+        <br>
+        <h3><center>BUSCADOR</center></h3>
+
+<!-- Aqui esta la tabla que contiene los diferentes campos y especialidades-->
+<script type="text/javascript" src="resources/js/busquedaEspecialidades.jsp"></script>
+
+ 
+<div id="content">
+    <div id="contenido">
+        <form name="busquedaEspecialidadesForm" method="post" action="/especialidadesformativas/RXBuscadorEFRED/ListarEspecialidades.do">
+            <div class="formulario">
+                <h2>Búsqueda de Especialidades</h2>
+                <fieldset>
+                    <legend>Buscador</legend>
+                    <table id="tabla_datos" border="0" cellspacing="0" cellpadding="0">
+                        <caption></caption>
+                           <tr>
+                            <td class="centrar">
+                                <input type="radio" name="excluyente" value="1" checked="checked" onclick="deshabilitar(this.value);" />
+                            </td>
+                            <td>
+                                <div class="camposEnLinea">
+                                      <label for="text04">C&oacute;digo especialidad:</label>
+                                      <input type="text" name="idEspecialidad" maxlength="50" size="50" value="Introducir código" class="inputEnLinea" id="text04" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="centrar">
+                                <input type="radio" name="excluyente" value="0" onclick="deshabilitar(this.value);" />
+                            </td>
+                            <td>
+                                <div class="camposEnLinea">
+                                    <label for="text01">
+                                        Familia profesional
+                                        
+                                    </label>
+                                    <!-- Rellenamos el comboBox de familia profesional -->
+                                    <select name="idFamiliaSeleccionada" class="inputEnLinea" id="text01"><option value="">Selecciona una opci&oacute;n...</option>
+                                        <option value="AFD">ACTIVIDADES FISICAS Y DEPORTIVAS</option>
+                                        <option value="ADG">ADMINISTRACIÓN Y GESTIÓN</option>
+                                        <option value="AGA">AGRARIA</option>
+                                        <option value="ARG">ARTES GRÁFICAS</option>
+                                        <option value="ART">ARTES Y ARTESANÍAS</option>
+                                        <option value="COM">COMERCIO Y MARKETING</option>
+                                        <option value="EOC">EDIFICACIÓN Y OBRA CIVIL</option>
+                                        <option value="ELE">ELECTRICIDAD Y ELECTRÓNICA</option>
+                                        <option value="ENA">ENERGÍA Y AGUA</option>
+                                        <option value="FME">FABRICACIÓN MECÁNICA</option>
+                                        <option value="FCO">FORMACIÓN COMPLEMENTARIA</option>
+                                        <option value="HOT">HOSTELERÍA Y TURISMO</option>
+                                        <option value="IMP">IMAGEN PERSONAL</option>
+                                        <option value="IMS">IMAGEN Y SONIDO</option>
+                                        <option value="INA">INDUSTRIAS ALIMENTARIAS</option>
+                                        <option value="IEX">INDUSTRIAS EXTRACTIVAS</option>
+                                        <option value="IFC">INFORMÁTICA  Y COMUNICACIONES</option>
+                                        <option value="IMA">INSTALACIÓN Y MANTENIMIENTO</option>
+                                        <option value="MAM">MADERA, MUEBLE Y CORCHO</option>
+                                        <option value="MAP">MARÍTIMO PESQUERA</option>
+                                        <option value="QUI">QUÍMICA</option>
+                                        <option value="SAN">SANIDAD</option>
+                                        <option value="SEA">SEGURIDAD Y MEDIOAMBIENTE</option>
+                                        <option value="SSC">SERVICIOS SOCIOCULTURALES Y A LA COMUNIDAD</option>
+                                        <option value="TCP">TEXTIL, CONFECCIÓN Y PIEL</option>
+                                        <option value="TMV">TRANSPORTE Y MANTENIMIENTO DE VEHÍCULOS</option>
+                                        <option value="VIC">VIDRIO Y CERÁMICA</option></select>
+                                </div>
+                                                    
+                                <div class="camposEnLinea">
+                                    <label for="text02">
+                                        <span class="ocultar" style="display:none;">&Aacute;rea profesional</span>
+                                        <input id="mostrarAreaBoton" type="submit" name="metodo" class="btnGenerico" value="Mostrar Areas Profesionales" title="Mostrar &Aacute;reas profesionales"  />
+                                      </label>
+                                      
+                                    
+                                    <!-- Rellenamos el comboBox de área profesional -->
+                                    <select name="idAreaSeleccionada" class="inputEnLinea" id="text02"><option value="">Selecciona una opci&oacute;n...</option>
+                                            <option value="AFDB">ACTIVIDADES DEPORTIVAS DE BIENESTAR FÍSICO</option>
+                                            <option value="AFDA">ACTIVIDADES FÍSICO DEPORTIVAS RECREATIVAS</option>
+                                            <option value="ESPACIO">......</option>
+                                            <option value="ADGA">ADMINISTRACIÓN / GESTIÓN</option>
+                                            <option value="ADGD">ADMINISTRACIÓN Y AUDITORÍA</option>
+                                            <option value="ESPACIO">......</option>
+                                            <option value="AGAA">AGAA_AGROTURISMO</option>
+                                            <option value="AGAU">AGRICULTURA</option>
+                                            <option value="ESPACIO">......</option>
+                                            <option value="ARGA">ACTIVIDADES Y TÉCNICAS GRÁFICAS ARTÍSTICAS</option>
+                                            <option value="ARGD">DISEÑO</option>
+                                            <option value="ESPACIO">......</option>
+                                            <option value="ARTU">ARTES ESCÉNICAS</option>
+                                            <option value="ARTA">ARTESANÍA TRADICIONAL</option>
+                                            <option value="ESPACIO">......</option>
+                                            <option value="COMA">ALMACENAJE</option>
+                                            <option value="COMC">ATENCIÓN AL CLIENTE</option>
+                                            <option value="ESPACIO">......</option>
+                                            <option value="EOCA">ACABADOS</option>
+                                            <option value="EOCL">ALBAÑILERÍA</option>
+                                            <option value="ESPACIO">......</option>
+                                            <option value="ELEA">ELECTRICIDAD</option>
+                                            <option value="ELEC">ELECTRÓNICA</option>
+                                            <option value="ESPACIO">......</option>
+                                            <option value="ENAA">AGUA</option>
+                                            <option value="ENAT">CAPTACIÓN, TRATAMIENTO Y DISTRIBUCIÓN DE AGUA</option>
+                                            <option value="ESPACIO">......</option>
+                                            <option value="FMEB">ABRASIVOS</option>
+                                            <option value="FMED">ARTÍCULOS DIVERSOS</option>
+                                            <option value="ESPACIO">......</option>
+                                            <option value="FCOA">ASPECTOS MEDIOAMBIENTALES</option>
+                                            <option value="FCOC">COLECTIVOS DESFAVORECIDOS</option>
+                                            <option value="ESPACIO">......</option>
+                                            <option value="HOTG">AGENCIAS DE VIAJE</option>
+                                            <option value="HOTU">AGROTURISMO</option>
+                                            <option value="ESPACIO">......</option>
+                                            <option value="IMPE">ESTÉTICA</option>
+                                            <option value="IMPQ">PELUQUERÍA</option>
+                                            <option value="ESPACIO">......</option>	
+                                            <option value="IMSA">AMBIENTACIÓN</option>
+                                            <option value="IMSN">ANIMACIÓN</option>
+                                            <option value="ESPACIO">......</option>
+                                            <option value="INAK">ACEITES Y GRASAS</option>
+                                            <option value="INAQ">ACTIVIDADES AUXILIARES EN LA INDUSTRIA ALIMENTARIA</option>
+                                            <option value="ESPACIO">......</option>
+                                            <option value="IEXZ">ÁREA ESPECIAL PARA CENTROS ESPECIALIZADOS</option>
+                                            <option value="IEXX">ESPECIALIDADES SIN ÁREA DEFINIDA (MINERÍA Y PRIMERAS TRANSFORMACIONES)</option>
+                                            <option value="ESPACIO">......</option>
+                                            <option value="IFCM">COMUNICACIONES</option>
+                                            <option value="IFCD">DESARROLLO</option>
+                                            <option value="ESPACIO">......</option>
+                                            <option value="IMAX">ESPECIALIDADES SIN ÁREA DEFINIDA (MANTENIMIENTO Y REPARACIÓN)</option>
+                                            <option value="IMAY">ESPECIALIDADES SIN ÁREA DEFINIDA (MONTAJE E INSTALACIÓN)</option>
+                                            <option value="ESPACIO">......</option>
+                                            <option value="MAMR">CARPINTERÍA Y MUEBLE</option>
+                                            <option value="MAMX">ESPECIALIDADES SIN ÁREA DEFINIDA (INDUSTRIAS DE LA MADERA Y EL CORCHO)</option>
+                                            <option value="ESPACIO">......</option>
+                                            <option value="MAPU">ACUICULTURA</option>
+                                            <option value="MAPB">BUCEO</option>
+                                            <option value="ESPACIO">......</option>
+                                            <option value="QUIA">ANÁLISIS Y CONTROL</option>
+                                            <option value="QUIX">ESPECIALIDADES SIN ÁREA DEFINIDA (INDUSTRIAS QUÍMICAS)</option>
+                                            <option value="ESPACIO">......</option>
+                                            <option value="SANA">ANATOMÍA PATOLÓGICA</option>
+                                            <option value="SANT">ATENCIÓN SANITARIA</option>
+                                            <option value="ESPACIO">......</option>
+                                            <option value="SEAC">CONSERVACIÓN DE LA FLORA Y FAUNA</option>
+                                            <option value="SEAA">CONTROL DE CALIDAD AMBIENTAL</option>
+                                            <option value="ESPACIO">......</option>
+                                            <option value="SSCA">ACTIVIDADES ASOCIATIVAS</option>
+                                            <option value="SSCC">ACTIVIDADES CULTURALES</option>
+                                            <option value="ESPACIO">......</option>
+                                            <option value="TCPC">CALZADO</option>
+                                            <option value="TCPA">CONFECCIÓN ANTE-NAPA Y PELETERÍA</option>
+                                            <option value="ESPACIO">......</option>
+                                            <option value="TMVO">AERONÁUTICA</option>
+                                            <option value="TMVT">AUTOMOCIÓN</option>
+                                            <option value="ESPACIO">......</option>
+                                            <option value="VICF">FABRICACIÓN CERÁMICA</option>
+                                            <option value="VICB">FABRICACIÓN DE BALDOSAS Y REVESTIMIENTOS CERÁMICOS</option></select>
+                                            
+                                            
+                                </div>
+                                
+                                <div class="camposEnLinea">
+                                      <label for="text03">Denominaci&oacute;n especialidad:</label>
+                                      <input type="text" name="nombreEspecialidad" maxlength="250" size="70" value="" class="inputEnLinea" id="text03" />
+                                </div>
+                            </td>
+                         </tr>
+                    </table>
+                  </fieldset>
+                <div id="pie_contenido">
+                    <input type="submit" name="metodo" class="boton" value="BUSCAR" title="Buscar" />
+                    <input type="submit" name="metodo" class="boton" value="SALIR" title="Salir" />
+                    
+                </div>
+            </div>
+            
+            <input type="hidden" name="navigationtag" value="PROCEDIMIENTOS_CIUDADANOS" />
+            
+        </form>
+    </div>
+</div>
+    
+<script>
+deshabilitar('1');
+</script>
+        
+                <br>
+                <br>
+    <!--Aqui se encuentra el footer que contiene los diferentes logos de las entidades que colaboran con el proyecto, todas las imagenes son contenidas en div diferentes-->
+        <footer>
+                <div class="SEXPE"><img src="img/sexpe-logo-fondo-transparente.png" width="120px" height="80px" alt="logo sexpe"></div>
+                <div class="UP"><img src="img/LOGO UP.png" width="80px" height="80px" alt="logo UP"></div>
+                <div class="JUNTA"><img src="img/LOGO JUNTA DE EXTREMADURA.png" width="240px" height="80px" alt="logo junta extremadura"></div>
+                <div class="PLANEMPLEO"><img src="img/LOGO PLAN DE EMPLEO.jfif" width="120px" height="80px" alt="logo de plan empleo"></div>
+                <div class="SEPE"><img src="img/logoSEPE.png" width="240px" height="80px" alt="logo del SEPE"></div>
+                <div class="DSTINO"><img src="img/LogoDSTINO.png" width="120px" height="80px" alt="logo del Proyecto DSTINO"></div>
+        </footer>
+    </body>
+    
+
+</html>
